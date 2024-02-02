@@ -1,0 +1,118 @@
+CRITICAL - 2024-01-30 05:20:39 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-01-30 05:20:40 --> ErrorException: Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\empresa\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\empresa\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 C:\xampp\htdocs\empresa\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 C:\xampp\htdocs\empresa\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 C:\xampp\htdocs\empresa\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 C:\xampp\htdocs\empresa\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 C:\xampp\htdocs\empresa\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\empresa\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-30 05:34:36 --> CodeIgniter\Exceptions\FrameworkException: The framework needs the following extension(s) installed and loaded: intl, mbstring.
+in SYSTEMPATH\CodeIgniter.php on line 252.
+ 1 SYSTEMPATH\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+ 2 SYSTEMPATH\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2024-01-30 05:34:36 --> ErrorException: Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\empresa\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\empresa\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 C:\xampp\htdocs\empresa\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 C:\xampp\htdocs\empresa\system\Debug\ExceptionHandler.php(81): CodeIgniter\HTTP\Response->send()
+#4 C:\xampp\htdocs\empresa\system\Debug\Exceptions.php(156): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl, mbstring.
+#0 C:\xampp\htdocs\empresa\system\CodeIgniter.php(252): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl, mbstring')
+#1 C:\xampp\htdocs\empresa\system\CodeIgniter.php(214): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\empresa\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2024-01-30 17:16:23 --> mysqli_sql_exception: Can't DROP COLUMN `updated_at`; check that it exists in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `em...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `em...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `em...')
+#3 C:\xampp\htdocs\empresa\system\Database\Forge.php(771): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `em...')
+#4 C:\xampp\htdocs\empresa\app\Database\Migrations\2024-01-30-170158_AgregarFechasEmpleados.php(25): CodeIgniter\Database\Forge->dropColumn('empleados', 'updated_at')
+#5 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(865): App\Database\Migrations\AgregarFechasEmpleados->down()
+#6 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(288): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\empresa\system\Commands\Database\MigrateRollback.php(86): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\empresa\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\empresa\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\empresa\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-30 17:19:01 --> mysqli_sql_exception: Can't DROP COLUMN `updated_at`; check that it exists in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `em...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `em...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `em...')
+#3 C:\xampp\htdocs\empresa\system\Database\Forge.php(771): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `em...')
+#4 C:\xampp\htdocs\empresa\app\Database\Migrations\2024-01-30-170158_AgregarFechasEmpleados.php(25): CodeIgniter\Database\Forge->dropColumn('empleados', 'updated_at')
+#5 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(865): App\Database\Migrations\AgregarFechasEmpleados->down()
+#6 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(288): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\empresa\system\Commands\Database\MigrateRollback.php(86): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\empresa\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\empresa\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\empresa\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-30 17:21:50 --> mysqli_sql_exception: Can't DROP COLUMN `updated_at`; check that it exists in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `em...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `em...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `em...')
+#3 C:\xampp\htdocs\empresa\system\Database\Forge.php(771): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `em...')
+#4 C:\xampp\htdocs\empresa\app\Database\Migrations\2024-01-30-170158_AgregarFechasEmpleados.php(25): CodeIgniter\Database\Forge->dropColumn('empleados', 'updated_at')
+#5 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(865): App\Database\Migrations\AgregarFechasEmpleados->down()
+#6 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(288): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\empresa\system\Commands\Database\MigrateRollback.php(86): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\empresa\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\empresa\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\empresa\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-30 17:22:07 --> mysqli_sql_exception: Can't DROP COLUMN `updated_at`; check that it exists in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `em...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `em...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `em...')
+#3 C:\xampp\htdocs\empresa\system\Database\Forge.php(771): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `em...')
+#4 C:\xampp\htdocs\empresa\app\Database\Migrations\2024-01-30-170158_AgregarFechasEmpleados.php(25): CodeIgniter\Database\Forge->dropColumn('empleados', 'updated_at')
+#5 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(865): App\Database\Migrations\AgregarFechasEmpleados->down()
+#6 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(288): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\empresa\system\Commands\Database\MigrateRollback.php(86): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\empresa\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\empresa\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\empresa\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-30 17:22:56 --> mysqli_sql_exception: Unknown column 'create_at' in 'empleados' in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('ALTER TABLE `em...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('ALTER TABLE `em...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('ALTER TABLE `em...')
+#3 C:\xampp\htdocs\empresa\system\Database\Forge.php(745): CodeIgniter\Database\BaseConnection->query('ALTER TABLE `em...')
+#4 C:\xampp\htdocs\empresa\app\Database\Migrations\2024-01-30-170158_AgregarFechasEmpleados.php(11): CodeIgniter\Database\Forge->addColumn('empleados', Array)
+#5 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(865): App\Database\Migrations\AgregarFechasEmpleados->up()
+#6 C:\xampp\htdocs\empresa\system\Database\MigrationRunner.php(181): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\empresa\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\empresa\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\empresa\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\empresa\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}

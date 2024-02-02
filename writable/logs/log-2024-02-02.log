@@ -1,0 +1,207 @@
+INFO - 2024-02-02 05:25:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 05:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 05:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-02 05:32:44 --> mysqli_sql_exception: Duplicate entry '1111111' for key 'clave' in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `em...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `em...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `em...')
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `em...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\empresa\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\empresa\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\empresa\app\Controllers\Empleados.php(127): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(941): App\Controllers\Empleados->update('2')
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-02 05:32:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1111111' for key 'clave'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (:clave:, :nombre:, :fecha_nacimiento:, :telefono:, :email:, :id_departamento:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Empleados.php(127): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->update('2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-02 05:32:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '1111111' for key 'clave'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (\'1111111\', \'kilmar\', \'2024-02-01\', \'12345678\', \'asa@gmail.com\', \'2\', \'2024-02-02 05:32:44\', \'2024-02-02 05:32:44\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (\'1111111\', \'kilmar\', \'2024-02-01\', \'12345678\', \'asa@gmail.com\', \'2\', \'2024-02-02 05:32:44\', \'2024-02-02 05:32:44\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (:clave:, :nombre:, :fecha_nacimiento:, :telefono:, :email:, :id_departamento:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Empleados.php(127): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->update('2')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-02 05:32:44 --> [Caused by] mysqli_sql_exception: Duplicate entry '1111111' for key 'clave'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (\'1111111\', \'kilmar\', \'2024-02-01\', \'12345678\', \'asa@gmail.com\', \'2\', \'2024-02-02 05:32:44\', \'2024-02-02 05:32:44\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (\'1111111\', \'kilmar\', \'2024-02-01\', \'12345678\', \'asa@gmail.com\', \'2\', \'2024-02-02 05:32:44\', \'2024-02-02 05:32:44\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (\'1111111\', \'kilmar\', \'2024-02-01\', \'12345678\', \'asa@gmail.com\', \'2\', \'2024-02-02 05:32:44\', \'2024-02-02 05:32:44\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2302): CodeIgniter\Database\BaseConnection->query('INSERT INTO `empleados` (`clave`, `nombre`, `fecha_nacimiento`, `telefono`, `email`, `id_departamento`, `created_at`, `updated_at`) VALUES (:clave:, :nombre:, :fecha_nacimiento:, :telefono:, :email:, :id_departamento:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Empleados.php(127): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->update('2')
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-02 05:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 05:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 05:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-02 06:02:09 --> mysqli_sql_exception: Unknown column 'departamento.id' in 'on clause' in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\empresa\app\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\empresa\app\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(941): App\Controllers\Empleados->index()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-02 06:02:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamento.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-02 06:02:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamento.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-02 06:02:09 --> [Caused by] mysqli_sql_exception: Unknown column 'departamento.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-02 06:02:36 --> mysqli_sql_exception: Unknown column 'departamento.id' in 'on clause' in C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\empresa\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `emplead...', 0)
+#1 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `emplead...')
+#2 C:\xampp\htdocs\empresa\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `emplead...')
+#3 C:\xampp\htdocs\empresa\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\empresa\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\empresa\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\empresa\app\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\empresa\app\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+#8 C:\xampp\htdocs\empresa\system\CodeIgniter.php(941): App\Controllers\Empleados->index()
+#9 C:\xampp\htdocs\empresa\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+#10 C:\xampp\htdocs\empresa\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\empresa\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-02-02 06:02:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamento.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', [], false)
+ 2 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-02 06:02:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'departamento.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', [], false)
+ 4 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->index()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-02 06:02:36 --> [Caused by] mysqli_sql_exception: Unknown column 'departamento.id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*, `departamentos`.`nombre` AS `departamento`
+FROM `empleados`
+JOIN `departamentos` ON `empleados`.`id_departamento` = `departamento`.`id`', [], false)
+ 5 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\EmpleadosModel.php(26): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Empleados.php(22): App\Models\EmpleadosModel->empleadosDepartamento()
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Empleados->index()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-02-02 06:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:12:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-02 06:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
